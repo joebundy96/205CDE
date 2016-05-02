@@ -1,0 +1,60 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="static/Main.css">
+{% endblock %}
+
+{% block title %}
+    Form
+{% endblock %}
+
+{% block navbar %}
+   <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MMA Journal</a>
+    </div>
+    
+      <div id="clock"></div>
+
+    <!-- links to other pages -->
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="https://website-205cde-joebundy96.c9users.io/Home">Home</a></li>
+        &nbsp&nbsp
+        <li><a href="https://website-205cde-joebundy96.c9users.io/latestnews">Latest News</a></li>
+        &nbsp&nbsp
+         <li><a href="https://website-205cde-joebundy96.c9users.io/events">Events</a></li>
+        &nbsp&nbsp
+        <li class=active><a href="https://website-205cde-joebundy96.c9users.io/Form">Comments</a></li>
+        &nbsp&nbsp
+    </div>
+  </div>
+</nav>
+
+   
+    <div class="container">
+        <div class = 'jumbotron'>
+        <ul class="entries">
+            {% for entry in entries %}
+        <h2 id = commentname>{{ entry.name|capitalize }}</h2> <h3 id = comment>{{ entry.comments }}</h3>
+            {% endfor %}
+        </ul>
+        
+        <p>
+       &nbsp&nbsp  <a class = "btn btn-md btn-primary" href = "https://website-205cde-joebundy96.c9users.io/Form" role = "button"> Back to form </a>
+      </p>
+        </div>
+    </div>
+    
+<script type="text/javascript" src="static/script.js"></script>
+{% endblock %}

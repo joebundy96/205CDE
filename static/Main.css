@@ -1,0 +1,38 @@
+body {
+    min-height:2000px;
+    padding-top:70px;
+    background-image: url(Arena.jpg);
+    background-size:cover;
+}
+
+#form_description {
+    text-align: center;
+}
+
+#commentname {
+    font-size:large;
+    font-weight: bold;
+    text-decoration: underline
+}
+
+#comment {
+    font-size: medium;
+}
+
+#Article1 {
+    border-style: groove;
+}
+
+#Article2 {
+    border-style: groove;
+}
+#Article3 {
+    border-style: groove;
+}
+
+#clock{
+    position: fixed;
+    right: 65px;
+    top:15px;
+}
+@media screen and (max-width: 766px){#clock{display:none;}}
